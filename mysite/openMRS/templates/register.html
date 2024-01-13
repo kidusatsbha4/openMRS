@@ -1,0 +1,53 @@
+{% load static %}
+{% load bootstrap4 %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% bootstrap_css %}
+       
+    </head>
+        <h1  class="text-center bg-light text-dark"  >openMRS</h1><br>
+<form method="post"  >
+    {% csrf_token %}
+    <div class="container">
+        <h6 class=" text-center  ">CREATE ACCOUNT</h6>
+        <div class="row ml-5">
+            
+            <div class="col-sm-6" >
+                <label for="fname">First name:</label><br>
+                <input type="text" id="firstname" name="firstname" value="{{memb.firstname}}"><br><br>
+                <label for="lname">Last name:</label><br>
+                <input type="text" id="lastname" name="lastname" value="{{memb.lastname}}" ><br><br>
+                <label for="dateofbirth">birth date:</label><br>
+                <input type="date" id="dateofbirth" name="dateofbirth" value="{{memb.dateofbirth}}" ><br><br>
+                <label for="gender">gender:</label><br>
+                <input type="text" id="gender" name="gender" value="{{memb.gender}}" ><br><br>
+                <label for="address">address:</label><br>
+                <input type="text" id="address" name="address" value="{{memb.address}}" ><br><br>
+                <label for="phonenumber">phone number:</label><br>
+                <input type="text" id="phonenumber" name="phonenumber" value="{{memb.phonenumber}}" ><br><br>
+                <label for="email">email:</label><br>
+                <input type="text" id="email" name="email" value="{{memb.email}}" ><br><br>
+            </div>
+            <div class="col-sm-6" >
+                <label for="nationality">nationality:</label><br>
+                <input type="text" id="nationality" name="nationality" value="{{memb.nationality}}" ><br><br>
+                <label for="maritalstatus">marital status:</label><br>
+                <input type="text" id="maritalstatus" name="maritalstatus" value="{{memb.maritalstatus}}" ><br><br>
+                <label for="occupation">occupation:</label><br>
+                <input type="text" id="occupation" name="occupation" value="{{memb.occupation}}" ><br><br>
+                <label for="emergencycontact">emergency contact:</label><br>
+                <input type="text" id="emergencycontact" name="emergencycontact" value="{{memb.emergencycontact}}" ><br><br>
+                <label for="insuranceinformation">insurance information:</label><br>
+                <textarea id="insuranceinformation" name="insuranceinformation" rows="4" cols="50" value="{{memb.insuranceinformation}}">
+                    </textarea><br><br>
+                    <button type="submit" value="Submit" class="btn btn-success">submit</button>
+            </div>
+              <br><br>
+                
+        </div>
+    </div>
+</form>
+    {% bootstrap_javascript %}
+</body>
+</html>
