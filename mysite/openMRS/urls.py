@@ -6,6 +6,6 @@ urlpatterns=[
     path('show/update/<int:id>/',views.update,name='update'),
     path('show/update/<int:id>/up',views.up,name='up'),
     path('members/',views.members,name='members'),
-    path('register/',views.register,name='register'),
+    path('',views.register,name='register'),
 
 ]
