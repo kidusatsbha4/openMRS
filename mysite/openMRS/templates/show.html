@@ -45,8 +45,8 @@
                 <td>{{data.occupation}}</td>
                 <td>{{data.emergencycontact}}</td>
                 <td>{{data.insuranceinformation}}</td>
-                <td><a href="delete/{{data.id}}">delete</a></td>
-                <td><a href="update/{{data.id}}">update</a></td>
+                <td><a class="btn btn-danger" href="delete/{{data.id}}">delete</a></td>
+                <td><a class="btn btn-success" href="update/{{data.id}}">update</a></td>
             </tr>
         {% endfor %}    
         </tbody>
